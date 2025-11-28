@@ -1,15 +1,10 @@
 {
-  "name": "task-collaboration-platform-advanced",
+  "name": "taskhub-pro",
   "version": "2.0.0",
-  "description": "Enterprise-grade task management platform",
   "private": true,
-  "type": "module",
   "dependencies": {
     "@apollo/client": "^3.8.8",
-    "@apollo/server": "^5.0.0",
-    "@as-integrations/aws-lambda": "^4.0.1",
     "graphql": "^16.8.1",
-    "graphql-ws": "^5.14.3",
     "lucide-react": "^0.294.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,25 +13,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "build": "DISABLE_ESLINT_PLUGIN=true react-scripts build"
   }
 }
