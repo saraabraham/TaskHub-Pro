@@ -13,10 +13,12 @@ import {
 } from 'lucide-react';
 
 
-// Apollo Client Setup
 const httpLink = createHttpLink({
-  uri: process.env.REACT_APP_GRAPHQL_URI || 'http://localhost:4000/graphql',
+  uri: process.env.NODE_ENV === 'production'
+    ? '/.netlify/functions/graphql'
+    : 'http://localhost:8888/.netlify/functions/graphql',
 });
+
 
 const client = new ApolloClient({
   link: httpLink,
