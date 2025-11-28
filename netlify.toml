@@ -14,4 +14,6 @@
   status = 200
 
 [functions]
-  node_bundler = "esbuild"
+node_bundler = "esbuild"
+external_node_modules = ["@apollo/server", "@as-integrations/aws-lambda"]
+
