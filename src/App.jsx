@@ -12,9 +12,10 @@ import {
   Filter, Download, Upload, Star, MessageSquare
 } from 'lucide-react';
 
+
 // Apollo Client Setup
 const httpLink = createHttpLink({
-  uri: 'http://localhost:4000/graphql',
+  uri: process.env.REACT_APP_GRAPHQL_URI || 'http://localhost:4000/graphql',
 });
 
 const client = new ApolloClient({

@@ -523,12 +523,24 @@ const resolvers = {
   }
 };
 
-const server = new ApolloServer({ typeDefs, resolvers, introspection: true });
+const server = new ApolloServer({
+  typeDefs,
+  resolvers,
+  introspection: true,
+  cors: {
+    origin: '*', // Update this to your Netlify URL in production
+    credentials: true
+  }
+});
 
 const startServer = async () => {
-  const { url } = await startStandaloneServer(server, { listen: { port: 4000 } });
+  const PORT = process.env.PORT || 4000;
+  const { url } = await startStandaloneServer(server, {
+    listen: { port: PORT }
+  });
   console.log(`🚀 Server: ${url}`);
-  console.log(`✨ Pure GraphQL - matching queries.js`);
+  console.log(`✨ Pure GraphQL - Production Ready`);
 };
+
 
 startServer();
